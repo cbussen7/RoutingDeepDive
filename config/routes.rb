@@ -15,6 +15,10 @@ Rails.application.routes.draw do
   resources :blogs
   resources :posts
 
+  get "posts/*missing", to: "posts#missing"
+
+  get "query/:else/:another_one", to: "pages#something"
+
   # define landing page route
   root to: "pages#home"
 end
